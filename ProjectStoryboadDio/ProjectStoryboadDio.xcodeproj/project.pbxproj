@@ -66,17 +66,9 @@
 			children = (
 				B63ADFD52ADF2D7E0022024E /* Resources */,
 				B63ADFD42ADF2D790022024E /* Sources */,
-				B63ADFD32ADF2D740022024E /* New Group */,
 				B63ADFCD2ADF2CFB0022024E /* Info.plist */,
 			);
 			path = ProjectStoryboadDio;
-			sourceTree = "<group>";
-		};
-		B63ADFD32ADF2D740022024E /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B63ADFD42ADF2D790022024E /* Sources */ = {
@@ -131,14 +123,14 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B63ADFDA2ADF2DE90022024E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModel;
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		B63ADFDB2ADF2DFF0022024E /* Cell */ = {
