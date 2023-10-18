@@ -10,35 +10,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PizzaListCell" rowHeight="232" id="KGk-i7-Jjw" customClass="PizzaListCell" customModule="ProjectStoryboadDio" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="331" height="232"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PizzaListCell" rowHeight="388" id="KGk-i7-Jjw" customClass="PizzaListCell" customModule="ProjectStoryboadDio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="310"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="331" height="232"/>
+                <rect key="frame" x="0.0" y="0.0" width="331" height="310"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cot-Ho-mxE">
-                        <rect key="frame" x="10" y="10" width="311" height="160"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="oZT-ll-cDi">
+                        <rect key="frame" x="10" y="260" width="311" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="160" id="g5n-Bd-FUl"/>
+                            <constraint firstAttribute="height" constant="40" id="X5s-jz-PGE"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZT-ll-cDi">
-                        <rect key="frame" x="10" y="182" width="311" height="38"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cot-Ho-mxE">
+                        <rect key="frame" x="10" y="10" width="311" height="240"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="UOo-As-1jv"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="oZT-ll-cDi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="5qn-YG-2Mm"/>
-                    <constraint firstItem="cot-Ho-mxE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="EX0-5w-w9M"/>
-                    <constraint firstItem="oZT-ll-cDi" firstAttribute="top" secondItem="cot-Ho-mxE" secondAttribute="bottom" constant="12" id="Xi1-MR-xhO"/>
-                    <constraint firstAttribute="trailing" secondItem="cot-Ho-mxE" secondAttribute="trailing" constant="10" id="aPJ-NF-U7O"/>
-                    <constraint firstAttribute="bottom" secondItem="oZT-ll-cDi" secondAttribute="bottom" constant="12" id="kwe-JK-fv2"/>
-                    <constraint firstItem="cot-Ho-mxE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tJb-vM-UD2"/>
-                    <constraint firstAttribute="trailing" secondItem="oZT-ll-cDi" secondAttribute="trailing" constant="10" id="xiC-I5-scB"/>
+                    <constraint firstItem="oZT-ll-cDi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0zn-wZ-G4Y"/>
+                    <constraint firstItem="oZT-ll-cDi" firstAttribute="top" secondItem="cot-Ho-mxE" secondAttribute="bottom" constant="10" id="BSZ-oa-bL9"/>
+                    <constraint firstAttribute="trailing" secondItem="cot-Ho-mxE" secondAttribute="trailing" constant="10" id="KqW-9g-xat"/>
+                    <constraint firstItem="cot-Ho-mxE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aXX-tY-kli"/>
+                    <constraint firstAttribute="bottom" secondItem="oZT-ll-cDi" secondAttribute="bottom" constant="10" id="cwv-X1-d1w"/>
+                    <constraint firstItem="cot-Ho-mxE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vIW-ZH-4gW"/>
+                    <constraint firstAttribute="trailing" secondItem="oZT-ll-cDi" secondAttribute="trailing" constant="10" id="ywb-gO-Nbz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -46,7 +49,7 @@
                 <outlet property="imagePizza" destination="cot-Ho-mxE" id="EBz-YD-cRG"/>
                 <outlet property="labelPizza" destination="oZT-ll-cDi" id="eHI-xL-iJP"/>
             </connections>
-            <point key="canvasLocation" x="138.1679389312977" y="54.929577464788736"/>
+            <point key="canvasLocation" x="138.1679389312977" y="82.394366197183103"/>
         </tableViewCell>
     </objects>
 </document>
