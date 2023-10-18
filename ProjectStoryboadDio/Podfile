@@ -8,5 +8,6 @@ target 'ProjectStoryboadDio' do
   # Pods for ProjectStoryboadDio
  pod 'Kingfisher'
  pod 'Alamofire'
+ pod 'Cosmos'
 
 end
