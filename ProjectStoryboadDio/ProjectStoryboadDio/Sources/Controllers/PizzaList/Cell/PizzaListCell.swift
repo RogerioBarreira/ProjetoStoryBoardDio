@@ -15,7 +15,6 @@ class PizzaListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,5 +35,9 @@ class PizzaListCell: UITableViewCell {
             imagePizza.image = nil
         }
         labelPizza.text = pizza?.name ?? ""
+        labelPizza.layer.borderWidth = 2
+        labelPizza.layer.borderColor = UIColor.black.cgColor
+        labelPizza.layer.cornerRadius = 8
+        labelPizza.clipsToBounds = true
     }
 }

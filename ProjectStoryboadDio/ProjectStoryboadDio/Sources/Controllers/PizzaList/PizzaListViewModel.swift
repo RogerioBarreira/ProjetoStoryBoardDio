@@ -21,7 +21,8 @@ class PizzaListViewModel {
     }
     
     func requestPizza(completion: @escaping (Bool) -> Void) {
-        request.requestPizza { pizza, success in
+        request.requestPizza { [weak self] pizza, success in
+            guard let self = self else { return }
             if success {
                 self.myPizza = pizza
                 completion(true)

@@ -15,6 +15,8 @@ class PizzaListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = Constants.Key.titleViewController.stringValue
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         setupRequest()
     }
@@ -22,7 +24,7 @@ class PizzaListViewController: UIViewController {
     private func setupTableView() {
         myTableView.delegate = self
         myTableView.dataSource = self
-        myTableView.register(UINib.init(nibName: "PizzaListCell", bundle: nil), forCellReuseIdentifier: "PizzaListCell")
+        myTableView.register(UINib.init(nibName: Constants.Key.nibName.stringValue, bundle: nil), forCellReuseIdentifier: Constants.Key.cellReuseIdentifier.stringValue)
     }
     
     private func setupRequest() {
@@ -40,7 +42,7 @@ class PizzaListViewController: UIViewController {
     
     private func showMessageError(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let buttonAction = UIAlertAction(title: "OK", style: .destructive)
+        let buttonAction = UIAlertAction(title: Constants.Key.alertActionTitle.stringValue, style: .destructive)
         alert.addAction(buttonAction)
         self.present(alert, animated: true)
     }
@@ -53,7 +55,7 @@ extension PizzaListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PizzaListCell", for: indexPath) as? PizzaListCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Key.withIdentifier.stringValue, for: indexPath) as? PizzaListCell {
             
             cell.setupCell(pizza: viewModel.cellForRowPizza(indexPath: indexPath))
             return cell
@@ -64,6 +66,7 @@ extension PizzaListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let detailPizza = PizzaDetailViewController()
+        detailPizza.viewModel.getDetailPizza(detail: viewModel.cellForRowPizza(indexPath: indexPath))
             self.navigationController?.pushViewController(detailPizza, animated: true)
     }
     
