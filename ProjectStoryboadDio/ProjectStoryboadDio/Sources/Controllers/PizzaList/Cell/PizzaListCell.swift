@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PizzaListCell: UITableViewCell {
     
@@ -21,13 +22,19 @@ class PizzaListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setupCell(name: String) {
-        imagePizza.image = UIImage(systemName: "person")
-        imagePizza.backgroundColor = .gray
-        imagePizza.layer.cornerRadius = 10
-        imagePizza.layer.borderWidth = 2
-        imagePizza.layer.borderColor = UIColor.black.cgColor
-        imagePizza.clipsToBounds = true
-        labelPizza.text = "Mussarela"
+    func setupCell(pizza: PizzaElement?) {
+        if let url = URL(string: pizza?.imageURL ?? "") {
+            imagePizza.kf.indicatorType = .activity
+            imagePizza.kf.setImage(with: url)
+            imagePizza.contentMode = .scaleAspectFill
+            imagePizza.backgroundColor = .gray
+            imagePizza.layer.cornerRadius = 10
+            imagePizza.layer.borderWidth = 2
+            imagePizza.layer.borderColor = UIColor.black.cgColor
+            imagePizza.clipsToBounds = true
+        } else {
+            imagePizza.image = nil
+        }
+        labelPizza.text = pizza?.name ?? ""
     }
 }
